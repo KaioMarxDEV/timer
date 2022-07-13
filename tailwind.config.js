@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{ts,tsx}'],
+  mode: 'jit',
   theme: {
     colors: {
       white: '#FFF',
@@ -31,7 +32,5 @@ module.exports = {
       roboto: ['Roboto'],
       rmono: ['Roboto Mono'],
     },
-    extend: {},
   },
-  plugins: [],
 };

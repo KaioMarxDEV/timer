@@ -1,12 +1,14 @@
-import { NavLink } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+
+import { Header } from './components/Header';
 
 function App() {
   return (
-    <div>
-      <h1>something</h1>
-      <nav>
-        <NavLink to="/home">To home</NavLink>
-      </nav>
+    <div className="flex h-screen w-full flex-col items-center">
+      <div className="my-20 mx-40 h-full max-h-[46rem] w-full max-w-6xl rounded-lg bg-gray-700">
+        <Header />
+        <Outlet />
+      </div>
     </div>
   );
 }
