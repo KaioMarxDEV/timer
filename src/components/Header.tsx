@@ -9,14 +9,14 @@ export function Header() {
       <img className="h-10 w-10" src={Logo} alt="Logo" />
       <nav className="flex flex-row items-center gap-2">
         <NavLink
-          to="/timer"
-          className="mx-3 my-2 flex items-center justify-center py-0.5 px-1 focus:rounded-xl focus:text-green-300"
+          to="/"
+          className="mx-3 my-2 flex items-center justify-center py-0.5 px-1 transition-all focus-within:-translate-y-2 focus:rounded-xl focus:text-green-300"
         >
           <Timer size={22} />
         </NavLink>
         <NavLink
           to="/history"
-          className="mx-3 my-2 flex items-center justify-center py-0.5 px-1 focus:rounded-xl focus:text-green-300"
+          className="mx-3 my-2 flex items-center justify-center py-0.5 px-1 transition-all focus-within:-translate-y-2 focus:rounded-xl focus:text-green-300"
         >
           <Scroll size={22} />
         </NavLink>
