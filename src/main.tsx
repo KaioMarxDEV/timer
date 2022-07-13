@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import { TimerRoutes } from './TimerRoutes';
+import { TimerRoutes } from './pages/TimerRoutes';
 
 ReactDOM.render(
   <React.StrictMode>
