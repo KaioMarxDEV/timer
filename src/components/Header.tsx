@@ -10,13 +10,13 @@ export function Header() {
       <nav className="flex flex-row items-center gap-2">
         <NavLink
           to="/"
-          className="mx-3 my-2 flex items-center justify-center py-0.5 px-1 transition-all focus-within:-translate-y-2 focus:rounded-xl focus:text-green-300"
+          className="mx-3 my-2 flex items-center justify-center py-0.5 px-1 text-gray-100 transition-all hover:text-green-300 focus:-translate-y-1 focus:rounded-xl focus:text-green-300"
         >
           <Timer size={22} />
         </NavLink>
         <NavLink
           to="/history"
-          className="mx-3 my-2 flex items-center justify-center py-0.5 px-1 transition-all focus-within:-translate-y-2 focus:rounded-xl focus:text-green-300"
+          className="mx-3 my-2 flex items-center justify-center py-0.5 px-1 text-gray-100 transition-all hover:text-green-300 focus:-translate-y-1  focus:rounded-xl focus:text-green-300"
         >
           <Scroll size={22} />
         </NavLink>

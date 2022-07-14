@@ -2,7 +2,7 @@ import { DefaultLayout } from './Layouts/DefaultLayout';
 
 function App() {
   return (
-    <div className="h-screen w-full">
+    <div>
       <DefaultLayout />
     </div>
   );
