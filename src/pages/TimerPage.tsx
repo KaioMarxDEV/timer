@@ -9,8 +9,13 @@ export function TimerPage() {
           <input
             className="h-10 flex-1 border-0 border-b-2 border-gray-500 bg-transparent px-1 text-lg  font-bold text-gray-100 transition-all placeholder:text-gray-500 focus:-translate-y-1 focus:rounded focus:border-b-green-300 focus:shadow focus:shadow-green-300 "
             id="task"
+            list="task-suggest"
             placeholder="Type the task name here"
           />
+
+          <datalist id="task-suggest">
+            <option value="asdfa" />
+          </datalist>
 
           <label htmlFor="minutesAmount">For</label>
           <input
@@ -18,6 +23,9 @@ export function TimerPage() {
             type="number"
             id="minutesAmount"
             placeholder="00"
+            min={5}
+            max={60}
+            step={5}
           />
           <span>minutes.</span>
         </div>
