@@ -19,7 +19,6 @@ export function Header() {
 
   return (
     <header className="mt-10 mb-20 flex flex-row items-center justify-between px-10">
-      <div className="active:-translate-y-1" />
       <img className="h-10 w-10" src={Logo} alt="Logo" />
       <nav className="flex flex-row items-center gap-2">
         <NavLink
