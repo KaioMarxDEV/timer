@@ -4,11 +4,7 @@
 
 @layer base {
   * {
-    @apply m-0 box-border p-0 antialiased;
-  }
-
-  :focus {
-    @apply shadow shadow-green-500;
+    @apply m-0 box-border p-0 antialiased border-0 outline-0;
   }
 
   body {
