@@ -99,6 +99,9 @@ export function TimerPage() {
               }
             }),
           );
+
+          setAmountSecondsPassed(totalSeconds);
+          clearInterval(interval);
         } else {
           setAmountSecondsPassed(secondsDiff);
         }
