@@ -51,8 +51,8 @@ export function TimerPage() {
   }
 
   function handleStopCycle() {
-    setCycle(
-      cycles.map((cycle) => {
+    setCycle((state) =>
+      state.map((cycle) => {
         if (cycle.id === activeCycleId) {
           return { ...cycle, stopDate: new Date() };
         } else {
@@ -90,8 +90,8 @@ export function TimerPage() {
         const secondsDiff = differenceInSeconds(new Date(), activeCyleObj.startDate);
 
         if (secondsDiff >= totalSeconds) {
-          setCycle(
-            cycles.map((cycle) => {
+          setCycle((state) =>
+            state.map((cycle) => {
               if (cycle.id === activeCycleId) {
                 return { ...cycle, FinishedDate: new Date() };
               } else {
