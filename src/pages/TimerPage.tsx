@@ -8,13 +8,20 @@ const newCicleFormValidationSchema = zod.object({
   taskMinutesAmount: zod.number().min(5).max(60),
 });
 
+type INewCicleFormFields = zod.infer<typeof newCicleFormValidationSchema>;
+
 export function TimerPage() {
-  const { register, handleSubmit, watch } = useForm({
+  const { register, handleSubmit, watch, reset } = useForm<INewCicleFormFields>({
     resolver: zodResolver(newCicleFormValidationSchema),
+    defaultValues: {
+      taskMinutesAmount: 0,
+      taskName: '',
+    },
   });
 
-  function handleCreateNewCicle(data: any) {
+  function handleCreateNewCicle(data: INewCicleFormFields) {
     console.log(data);
+    reset();
   }
 
   const task = watch('taskName');
