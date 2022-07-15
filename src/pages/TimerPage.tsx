@@ -18,6 +18,7 @@ interface Cycle {
   taskMinutesAmount: number;
   startDate: Date;
   stopDate?: Date;
+  FinishedDate?: Date;
 }
 
 export function TimerPage() {
@@ -86,7 +87,21 @@ export function TimerPage() {
 
     if (activeCyleObj) {
       interval = setInterval(() => {
-        setAmountSecondsPassed(differenceInSeconds(new Date(), activeCyleObj.startDate));
+        const secondsDiff = differenceInSeconds(new Date(), activeCyleObj.startDate);
+
+        if (secondsDiff >= totalSeconds) {
+          setCycle(
+            cycles.map((cycle) => {
+              if (cycle.id === activeCycleId) {
+                return { ...cycle, FinishedDate: new Date() };
+              } else {
+                return cycle;
+              }
+            }),
+          );
+        } else {
+          setAmountSecondsPassed(secondsDiff);
+        }
       }, 1000);
     }
 
